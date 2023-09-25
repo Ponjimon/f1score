@@ -1,0 +1,34 @@
+{
+	"name": "Node.js & TypeScript",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+		  "VARIANT": "20-bullseye"
+		}
+	},
+	"customizations": {
+		"vscode": {
+		  "settings": {
+			"scss.lint.unknownAtRules": "ignore",
+			"tailwindCSS.experimental.classRegex": [
+			  "[cC]lasses\\s*=\\s*`([\\s\\S]*?)`",
+			  "tw`([^`]*)",
+			  ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+			]
+		  },
+		  "extensions": [
+			"dbaeumer.vscode-eslint",
+			"esbenp.prettier-vscode",
+			"EditorConfig.EditorConfig",
+			"mikestead.dotenv",
+			"bradlc.vscode-tailwindcss",
+			"eamodio.gitlens",
+			"mutantdino.resourcemonitor",
+			"wix.vscode-import-cost",
+			"GitHub.copilot",
+			"astro-build.astro-vscode"
+		]
+		}
+	  },
+	"remoteUser": "node"
+}
